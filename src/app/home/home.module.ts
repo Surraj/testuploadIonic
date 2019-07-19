@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-
+import { MultiFileUploadComponent } from '../components/multi-file-upload/multi-file-upload.component';
+import { FileUploadModule } from 'ng2-file-upload';
 import { HomePage } from './home.page';
 
 @NgModule({
@@ -11,6 +12,7 @@ import { HomePage } from './home.page';
     CommonModule,
     FormsModule,
     IonicModule,
+    FileUploadModule,
     RouterModule.forChild([
       {
         path: '',
@@ -18,6 +20,6 @@ import { HomePage } from './home.page';
       }
     ])
   ],
-  declarations: [HomePage]
+  declarations: [HomePage,MultiFileUploadComponent]
 })
 export class HomePageModule {}
